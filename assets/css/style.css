@@ -45,6 +45,7 @@
   gap: 30px;
   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336) ;
   height: fit-content;
+  animation: dark-t0-light 0.3s ease-in-out;
 }
 
 #form_header {
@@ -157,4 +158,37 @@
 #login_button:hover {
   transform: scale(1.05);
   transition: 0.2s;
+}
+
+.dark#login_form {
+  color: var(--color-light-50);
+  background-color: var(--color-dark-100);
+  animation: light-t0-dark 0.3s ease-in-out;
+}
+
+.dark#login_form .input-field input,
+.dark#login_form .input-field i {
+  color: var(--color-light-50);
+}
+
+@keyframes dark-t0-light {
+  0% {
+    background-color: var(--color-dark-100);
+  }
+
+  100% {
+    background-color: var(--color-light-50);
+  }
+}
+
+@keyframes light-t0-dark {
+
+  0% {
+    background-color: var(--color-light-50);
+  };
+
+  100% {
+    background-color: var(--color-dark-100);
+  }
+
 }
